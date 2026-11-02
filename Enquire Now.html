@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send an enquiry to Yuppiechef about products, services, gifting, or corporate partnerships.">
+    <title>Yuppiechef - Enquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Yuppiechef</h1>
+        <p>Premium Kitchen & Homeware</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="gifting.html">Gifting</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html" class="active">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h2>Make an Enquiry</h2>
+        <p>We'd love to help with your product, gifting, or partnership questions.</p>
+    </section>
+
+    <!-- ENQUIRY FORM -->
+    <section class="contact-wrapper">
+
+        <!-- Enquiry Information -->
+        <div>
+            <h3>How Can We Help?</h3>
+            <p>Whether you're looking for a specific product, need help with a gift, or want to partner with Yuppiechef, fill in the form and our team will get back to you within 24 hours.</p>
+
+            <h3>Enquiry Types</h3>
+            <ul>
+                <li>Product availability & pricing</li>
+                <li>Gift registry enquiries</li>
+                <li>Corporate & bulk orders</li>
+                <li>Sponsorship & partnership</li>
+                <li>Volunteer opportunities</li>
+                <li>General questions</li>
+            </ul>
+
+            <h3>Quick Contact</h3>
+            <p><strong>Phone:</strong> +27 (0)12 345 6789</p>
+            <p><strong>Email:</strong> info@yuppiechef.com</p>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div>
+            <h3>Submit Your Enquiry</h3>
+            <form class="dynamic-form">
+                <div class="error-message"></div>
+                <div class="success-message"></div>
+                <!-- Full Name -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <!-- Email -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <!-- Phone -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567">
+
+                <!-- Enquiry Type -->
+                <label for="enquiry-type">Type of Enquiry:</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="">-- Please select --</option>
+                    <option value="product">Product Availability</option>
+                    <option value="gifting">Gifting & Registry</option>
+                    <option value="corporate">Corporate & Bulk Orders</option>
+                    <option value="sponsorship">Sponsorship & Partnership</option>
+                    <option value="volunteer">Volunteer Opportunities</option>
+                    <option value="general">General Question</option>
+                </select>
+
+                <!-- Subject -->
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Brief subject of your enquiry" required>
+
+                <!-- Message -->
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Please provide as much detail as possible..." required></textarea>
+
+                <!-- Preferred Contact Method -->
+                <label for="contact-method">Preferred Contact Method:</label>
+                <select id="contact-method" name="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+
+                <!-- Newsletter Opt-in -->
+                <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter" value="yes">
+                    Send me updates about new products and offers
+                </label>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Enquiry</button>
+
+            </form>
+            <div style="margin-top: 3rem;">
+                <h3>Frequently Asked Questions</h3>
+                
+                <button class="accordion-btn">How long does delivery take?</button>
+                <div class="accordion-content">
+                    <p>Standard delivery takes 3-5 business days depending on your location in South Africa.</p>
+                </div>
+
+                <button class="accordion-btn">Can I return a gifted item?</button>
+                <div class="accordion-content">
+                    <p>Yes, we accept returns within 30 days of purchase, provided the item is in its original packaging.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Yuppiechef. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

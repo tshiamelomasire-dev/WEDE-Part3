@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------- 2. BASE STYLES ---------- */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.3rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+/* ---------- 3. BUTTONS ---------- */
+.btn, .btn-add-to-cart, button {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #d4af37;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .btn-add-to-cart:hover, button:hover {
+    background-color: #b8962e;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background-color: #2c3e50;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #d4af37;
+}
+
+/* ---------- 4. HEADER & NAVIGATION ---------- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    gap: 2rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.logo span {
+    font-size: 0.7rem;
+    color: #d4af37;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    border-radius: 0;
+    padding: 0 1.5rem;
+    background-color: #2c3e50;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-icons a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+.header-icons a:hover {
+    color: #d4af37;
+}
+
+nav {
+    border-top: 1px solid #e2e8f0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4a5568;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #d4af37;
+    border-bottom-color: #d4af37;
+}
+
+/* ---------- 5. HERO SECTION ---------- */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
+        url('../images/hero-banner.jpg') center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    color: #f5f0eb;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- 6. PAGE HEADER (inner pages) ---------- */
+.page-header {
+    background-color: #2c3e50;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    color: #f5f0eb;
+}
+
+/* ---------- 7. GRIDS (Categories, Products, Gifts) ---------- */
+.featured-categories,
+.bestsellers,
+.testimonials,
+.our-story,
+.our-values,
+.gift-categories,
+.gift-vouchers,
+.contact-section,
+.map-section {
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-grid,
+.product-grid,
+.gift-grid,
+.values-grid,
+.testimonial-carousel,
+.registry-options,
+.voucher-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ---------- 8. CARDS (Categories, Products, Gifts) ---------- */
+.category-card,
+.product-card,
+.gift-card,
+.testimonial-card,
+.value-card,
+.mv-card,
+.registry-card,
+.voucher-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover,
+.product-card:hover,
+.gift-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img,
+.product-card img,
+.gift-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.product-rating {
+    color: #d4af37;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- 9. SECTION HEADINGS with underline ---------- */
+.featured-categories h2,
+.bestsellers h2,
+.testimonials h2,
+.our-values h2,
+.gift-categories h2,
+.gift-vouchers h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ---------- 10. NEWSLETTER ---------- */
+.newsletter {
+    background-color: #2c3e50;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: #ffffff;
+}
+
+.newsletter p {
+    color: #cbd5e0;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    min-width: 250px;
+}
+
+/* ---------- 11. SHOP PAGE ---------- */
+.shop-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.shop-filters {
+    background-color: #f5f0eb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.sort-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pagination ul {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f0eb;
+    border-radius: 4px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.pagination ul li a:hover,
+.pagination ul li a.active {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+/* ---------- 12. ABOUT PAGE ---------- */
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.mission-vision {
+    background-color: #f5f0eb;
+    padding: 4rem 1.5rem;
+}
+
+/* ---------- 13. CONTACT PAGE ---------- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-form {
+    background-color: #f5f0eb;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d4af37;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.map-container {
+    height: 400px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #718096;
+}
+
+/* ---------- 14. FOOTER ---------- */
+footer {
+    background-color: #2c3e50;
+    color: #cbd5e0;
+    padding: 4rem 1.5rem 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+    color: #d4af37;
+}
+
+.footer-section address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-section address a {
+    color: #d4af37;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a5568;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================================ */
+
+/* ---------- TABLET (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .category-grid,
+    .product-grid,
+    .gift-grid,
+    .values-grid,
+    .testimonial-carousel,
+    .registry-options,
+    .voucher-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .category-grid,
+    .product-grid,
+    .gift-grid,
+    .values-grid,
+    .testimonial-carousel,
+    .registry-options,
+    .voucher-options {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   PART 3 ADDITIONS: MODAL, ACCORDION & FORMS
+   ========================================== */
+
+/* --- Accordion Styles --- */
+.accordion-btn {
+    background-color: #f5f0eb;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.accordion-btn.active, .accordion-btn:hover {
+    background-color: #d4af37;
+    color: white;
+}
+.accordion-content {
+    padding: 0 15px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+}
+
+/* --- Modal/Lightbox Styles --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    padding-top: 100px; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Form Validation Messages --- */
+.error-message {
+    display: none;
+    color: #e53e3e;
+    background: #fed7d7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.success-message {
+    display: none;
+    color: #38a169;
+    background: #c6f6d5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

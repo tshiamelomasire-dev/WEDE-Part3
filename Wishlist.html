@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your saved items on your Yuppiechef Wishlist.">
+    <title>My Wishlist - Yuppiechef</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yuppiechef</h1>
+                    <span>Premium Kitchen & Homeware</span>
+                </a>
+            </div>
+            <div class="header-icons">
+                <a href="Account.html">Account</a>
+                <a href="Wishlist.html" class="active">Wishlist</a>
+                <a href="Cart.html">Cart (0)</a>
+            </div>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Shopping.html">Shop</a></li>
+                <li><a href="Gifting.html">Gifting</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Contact Us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h2>My Wishlist</h2>
+        <p>Keep track of your favourite items.</p>
+    </section>
+
+    <!-- WISHLIST SECTION -->
+    <section style="padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto;">
+        <div class="grid">
+            <!-- Item 1 -->
+            <div class="card wishlist-item">
+                <h3>Le Creuset Pot</h3>
+                <p>Premium cast iron cookware.</p>
+                <p class="price">R2,899.00</p>
+                <button class="btn-add-to-cart" onclick="moveToCart()">Move to Cart</button>
+                <button class="remove-btn" style="background-color: transparent; color: #e53e3e; border: 1px solid #e53e3e; margin-top: 10px; width: 100%;">Remove</button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card wishlist-item">
+                <h3>SMEG Toaster</h3>
+                <p>Retro-style toaster.</p>
+                <p class="price">R2,499.00</p>
+                <button class="btn-add-to-cart" onclick="moveToCart()">Move to Cart</button>
+                <button class="remove-btn" style="background-color: transparent; color: #e53e3e; border: 1px solid #e53e3e; margin-top: 10px; width: 100%;">Remove</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yuppiechef. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
